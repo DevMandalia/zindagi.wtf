@@ -2,7 +2,7 @@ import './style.css'
 import { tracks } from './tracks.js'
 
 const SPOTIFY_URL = 'https://open.spotify.com/playlist/37i9dQZF1FwQHrJc6k5MR5?si=2b98c57f091646cd'
-const YT_MUSIC_URL = ''
+const YT_MUSIC_URL = 'https://music.youtube.com/playlist?list=PLUvh2lQtfqSw&si=jW6HnGvpGOshrDpL'
 
 function coverUrl(youtubeId) {
   return `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`
