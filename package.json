@@ -1,14 +1,21 @@
 {
-  "name": "zindagi",
+  "name": "zindagi.wtf",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync": "node --env-file=.env.local scripts/sync-playlists.mjs",
+    "sync:dry": "node --env-file=.env.local scripts/sync-playlists.mjs --dry",
+    "auth:spotify": "node scripts/auth-spotify.mjs",
+    "auth:youtube": "node scripts/auth-youtube.mjs"
   },
   "devDependencies": {
     "vite": "^8.2.0"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0"
   }
 }

@@ -8,8 +8,6 @@
 
 Late-night breakup jukebox for **[zindagi.wtf](https://zindagi.wtf)** — saloon.wtf-style player, rainy bar scene.
 
-> GitHub READMEs can’t embed a live page (iframes are stripped), so the preview above is a screenshot that links to the live site.
-
 ## Local
 
 ```bash
@@ -35,9 +33,18 @@ Plan: `docs/song-suggestions-plan.md`
 - Owner digest: `GET /api/suggestions` with `Authorization: Bearer $SUGGESTIONS_SECRET` (or `?secret=`)
 - Local API: `npx vercel dev` (needs `.env.local` with `BLOB_READ_WRITE_TOKEN` + `SUGGESTIONS_SECRET`)
 
-## Share
+## Playlist sync
 
-Click the vinyl to copy `https://zindagi.wtf/?t=<id>`.
+Spotify is the catch-up source of truth. Suggestions fan out to the **site**, then **Spotify** + **YouTube** when OAuth tokens are configured.
+
+See `docs/playlist-sync.md`.
+
+```bash
+npm run auth:spotify
+npm run auth:youtube
+npm run sync:dry
+npm run sync
+```
 
 ## Deploy (Vercel)
 
