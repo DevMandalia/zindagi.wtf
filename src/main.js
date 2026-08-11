@@ -1,7 +1,7 @@
 import './style.css'
 import { tracks } from './tracks.js'
 
-const SPOTIFY_URL = ''
+const SPOTIFY_URL = 'https://open.spotify.com/playlist/37i9dQZF1FwQHrJc6k5MR5?si=2b98c57f091646cd'
 const YT_MUSIC_URL = ''
 
 function coverUrl(youtubeId) {
