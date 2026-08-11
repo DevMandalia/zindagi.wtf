@@ -15,15 +15,10 @@ npm run dev
 - Songs: `src/tracks.js` (first track is the cold open)
 - Spotify / YT Music: set `SPOTIFY_URL` / `YT_MUSIC_URL` in `src/main.js`
 
-## Deploy on Railway
+## Deploy (Vercel)
 
-This repo includes a `Dockerfile` + `Caddyfile` so Railway can build Vite and serve `dist/`.
-
-1. Push this project to GitHub (or deploy with Railway CLI).
-2. In Railway: **New Project → Deploy from GitHub** → select this repo.
-3. After deploy succeeds: **Settings → Networking**
-   - Add custom domain: `zindagi.wtf`
-   - (Optional) also add `www.zindagi.wtf` and redirect later
-   - Once `zindagi.wtf` is **Active**, remove any `*.up.railway.app` generated domain so visitors only use your domain
-4. At your DNS provider, add the exact `CNAME` + `TXT` records Railway shows.
-5. Wait for green verification + HTTPS, then open https://zindagi.wtf
+1. Push to GitHub (`zindagi.wtf` repo).
+2. Import the repo in Vercel (framework: Vite — auto-detected).
+3. Add domain `zindagi.wtf` in **Project → Settings → Domains**.
+4. In GoDaddy DNS, set the **A** / **CNAME** values Vercel shows (apex works via A record).
+5. Prefer apex as primary; redirect `www` → `zindagi.wtf`.

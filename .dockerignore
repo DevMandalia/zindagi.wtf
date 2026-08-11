@@ -1,7 +1,0 @@
-# Extra ignore for Railway/Docker context safety
-.git
-.gitignore
-node_modules
-dist
-README.md
-.DS_Store
